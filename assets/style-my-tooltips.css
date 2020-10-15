@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* style-my-tootltips CSS Document */
+#s-m-t-tooltip{
+	position:fixed; 
+	max-width:300px;  
+	padding:6px 8px 8px 8px; 
+	z-index:10; 
+	display:inline-block; /*important*/
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	/*шрифт*/
+	font-family:Verdana, Geneva, sans-serif; 
+	font-size:11px; 
+	line-height:16px;
+	color:#fff; 
+	/*css3 закругленные углы*/
+	-moz-border-radius:5px; 
+	-khtml-border-radius:5px; 
+	-webkit-border-radius:5px; 
+	border-radius:5px;
+}

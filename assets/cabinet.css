@@ -1,0 +1,261 @@
+*{margin:0;padding:0;}
+.cab{background:url(/assets/templates/Ummei/images/cabinet/Kabinet_A.jpg) #59200d 0 0;height:100%;width:100%;position:fixed; overflow-y:auto;overflow-x: hidden;}
+#boddy{
+	background: url(/assets/templates/Ummei/images/cabinet/Kabinet.jpg) no-repeat ;
+	background-origin: padding-box;
+	top:0;
+	width:1536px;
+	height:100%;
+	position:absolute;
+	left:50%;
+	margin-left: -508px;/*-640px!important  -578px*/
+}
+#page{
+	width: 630px;
+	margin:48px 0 0 646px;/*402px;*/
+}
+.wumen{
+	background:url(/assets/templates/Ummei/images/cabinet/Gerl.jpg) no-repeat #fff 0 101px;
+}
+.list, .wumen{
+	position:absolute;
+	right:20px;
+	top: 20px;
+	width:630px;
+	height:796px;
+}
+.list{
+	-moz-opacity: 0.4;
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+	background: #EEE;
+}
+.book{
+	background:url(/assets/templates/Ummei/images/cabinet/Editbook.jpg) no-repeat;
+	width: 1280px;
+	height: 839px;
+	position:relative;
+	left:50%;
+	margin-left: -1020px;
+}
+#table{
+	position:relative;
+	top:41px;
+	text-shadow:0pt 1px 1px;
+}
+input{
+	outline: none;
+	box-shadow: 0pt 1px 3px 1px rgb(92, 139, 238) inset, 0px 1px 0pt rgb(29, 44, 77), 0pt 4px 0px rgb(31, 48, 83), 0pt 8px 4px 1px rgb(150, 185, 197);
+	border-radius:10px;
+	border:none;
+	text-align: center;
+	text-shadow:0pt 2px 3px;
+}
+.errors{
+	position:relative;
+	top:25px;
+	text-shadow:0pt 1px 1px red;
+}
+.defaultSkin table.mceLayout{
+ position: relative;
+ /*left:100px;*/
+	top:41px;
+	/*width:583px;
+	height:680px; 746px;*/
+ background: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+@charset "UTF-8";
+
+.mceContentBody,
+.mceContentBody td,
+.mceContentBody th,
+.mceContentBody pre {
+/*	font-family: '????',Meiryo,'?????? Pro W3','Hiragino Kaku Gothic Pro','MS P????',sans-serif;*/
+	font-size  : 12px;
+	font-style : normal;
+	}
+
+.mceContentBody {
+	line-height          : 1.5;
+	color                : #333333;
+	background-color     : #FFFFFF;
+	background-attachment: fixed;
+	background-repeat:repeat-x !important;
+	background-image     : url(textareabg.gif) !important;
+	text-align           : left;
+	}
+
+.mceContentBody pre {
+	color                : #555555;
+}
+
+.mceContentBody h1,
+.mceContentBody h2,
+.mceContentBody h3,
+.mceContentBody h4,
+.mceContentBody h5,
+.mceContentBody h6 {
+	color         : #111111;
+	letter-spacing:1px;
+}
+
+.mceContentBody h4,
+.mceContentBody h5,
+.mceContentBody h6 {
+	font-size  : 12px;
+}
+.mceContentBody ul {
+	line-height     : 1.5;
+	margin          : 0 0 0.5em 20px;
+	padding         : 0;
+	}
+
+.mceContentBody ol {
+	line-height     : 1.5;
+	margin          : 0 0 0.5em 18px;
+	padding         : 0;
+	color           : black;
+	}
+
+.mceContentBody ol li {margin-left:7px;}
+
+.mceContentBody blockquote {
+	padding-left    : 7px;
+	margin-left     : 3px;
+	background-color: #fcfcfc;
+}
+
+.mceContentBody table {margin-bottom:8px;}
+.mceContentBody td,th {padding:4px !important;}
+.mceContentBody th    {background-color:#fcfcfc;text-align:left;}
+
+.mceContentBody a:hover {
+	color: #7fa2ff;
+	}
+.justifyleft  {float:left; margin-right:10px;margin-bottom:5px;}
+.justifyright {float:right; margin-left:10px;margin-bottom:5px;}
+
+
+/*body .mceContentBody{/*#tinymce.
+background: transparent !important;
+background-image:none  !important;
+opacity: 1 !important;
+}*/
+/*iframe#message_ifr{max-height:619px; width:595px !important;}*/
+
+
+#tinymce, iframe {background: transparent !important;}
+.mceToolbar{opacity: .8;}
+
+.button_{
+	background:url(/assets/templates/Ummei/images/cabinet/buttan.png) no-repeat;
+	width:153px;height:154px;
+	position:absolute;
+	left: 400px;bottom: 67px;
+	border: none;cursor:pointer;
+}
+#submit{
+	background:url(/assets/templates/Ummei/images/cabinet/buttan.jpg) no-repeat;
+	width:120px;height:55px;
+	position:absolute;left:20px;
+	top: 57px;border: none;
+}
+#submit:hover{background:url(/assets/templates/Ummei/images/cabinet/HoverButtan.jpg) no-repeat;}
+#submit:active {background:url(/assets/templates/Ummei/images/cabinet/KlickButtan.jpg) no-repeat;}
+
+.tab{
+	
+	z-index: 10;
+	width:508px;
+	/*top: 58px;*/
+	height:18px;
+	position:relative;
+	/*left: 380px; top: 0;*/	margin:10px auto 0;
+}
+#tabButtons a
+{font-family: Pushkin;
+	display:block;
+	width:150px;
+	height:48px;
+	margin-right: 10px;
+	float:left;
+	background:url(/assets/templates/Ummei/images/cabinet/nav-sprite.png) no-repeat;
+	cursor:pointer;	/*text-indent:-9999px;*/
+	/*top: 610px;*/
+}
+
+a 
+{	
+	margin: 0.4em auto;
+	font-size: 20px;
+	font-family: Pushkin;
+	font-weight: normal;
+	text-align: center;
+	text-decoration: none;
+	color: #777;
+}
+a.glowing 
+{
+	color: #0af;
+}
+
+#example_home
+{
+	background-position:0 0;
+}
+#example_home:hover,#example_home.hover
+{
+	background-position:0 -47px;
+}
+#example_blog
+{
+	background-position:-150px 0;
+}
+#example_blog:hover,#example_blog.hover
+{
+	background-position:-150px -47px;
+}
+#example_demo
+{
+	background-position:-300px 0;
+}
+
+#example_demo:hover,#example_demo.hover
+{
+	background-position:-300px -47px;
+}
+#example_about
+{
+	background-position:-450px 0;
+}			#example_about:hover,#example_about.hover
+{
+	background-position:-450px -47px;
+}
+#example_services
+{
+	background-position:-600px 0;
+}
+
+#example_services:hover,#example_services.hover
+{
+	background-position:-600px -47px;
+}
+#example_contact
+{
+	background-position:-750px 0;
+}
+
+#example_contact:hover,#example_contact.hover
+{
+	background-position:-750px -47px;
+}

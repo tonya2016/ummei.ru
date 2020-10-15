@@ -1,0 +1,78 @@
+password = '';
+$(document).ready(function(){
+    ajaxs_();
+    function return_(){
+       // Authenticate with the server
+        $.jCryption.authenticate(password, "/auth_log_target.html?generateKeypair=true", "auth_log_target.html?handshake=true",
+        function(AESKey) {
+        }, function() {
+            setTimeout(return_, 5000);
+        });
+    }
+    function randomString() {
+        var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+        var string_length = 128;
+        var randomstring = '';
+        for (var i=0; i<string_length; i++) {
+            var rnum = Math.floor(Math.random() * chars.length);
+            randomstring += chars.substring(rnum,rnum+1);
+        }
+        return randomstring;
+    }
+    var hashObj = new jsSHA(randomString, "ASCII");//ASCII
+    password = hashObj.getHash("SHA-512", "HEX");
+    return_();
+    
+    function ajaxs_(){
+            $('.Fon_hait3').find('span').html('');//.remove('span');
+            $(':input').attr("disabled",true);
+            //$('button, a').attr('disabled','disabled');
+            $('#bluebutton button').addClass('active');
+            var type_  = 'get';
+            var async_ = false;
+            var data_;
+            if ($('#usernames').val() && $('#passwords').val()){
+                data_ = {
+                        login:"login",
+                        username: $.jCryption.encrypt($('#usernames').val(), password),//username login
+                        password: $.jCryption.encrypt($("#passwords").val(), password),//password login_pass
+                        autologin: +($("#autologin").is(":checked")),
+                        viewonline: +($("#hideme").is(":checked")),
+                        redirect: "../index.html"
+                };
+                type_ = 'post';
+                async_ = true;
+                $('#usernames').val('');
+                $('#passwords').val('');
+            }
+            $.ajax({
+                url: 'auth_log_target.html',
+                async: async_,
+                type: type_,    
+                data: data_,
+                dataType: 'json',
+                success: login_,
+                error: return_/*,
+                complete: login_*/
+            });
+            function login_(dat){
+                    if (dat.error_login){
+                        var text_ = dat.error_login.replace(/%s./g, '<font color="#001460">', '</font>');
+                        $('.Fon_hait3').prepend('<span class="privmsg" style="color:#000; padding-left:130px;">'+text_+' или службу поддержки.</span>');
+                    } else if (dat.autach && dat.autach != '0') {//
+                        $('#example_blog').html('<p></br></p>Ваш профиль');
+                        $('#example_demo').attr('href','http://ummei.ru/'+dat.logout+'').html('<p></br></p>Выход');
+                        $('#email,#emaill,#usernames,#passwords').remove();
+                        $('textarea').attr('rows',5);
+                        $('#tab1').html(dat.autach);
+                        $('.Fon_hait3').prepend(dat.privmsg);
+                    } else if(!dat.autach) ajaxs_();
+                    $(':input').attr("disabled",false);
+                    $('#bluebutton button').removeClass('active');
+            }
+    }
+
+    $('#tab1 :input').live('keypress click', function(e) {
+        if(($(this).attr('id') == "submit" || e.keyCode == 13) && ($('#usernames').val() && $("#passwords").val()))  ajaxs_();
+    }); 
+});

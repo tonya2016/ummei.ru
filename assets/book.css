@@ -1,0 +1,414 @@
+/* begin Page */
+/*bigin Skrin*/
+body 
+{
+	/*overflow:hidden;*/ 	
+	display:  inline;
+	/*visibility*/
+	padding:0;margin:0;		
+	height:100%;width:100%;
+	/*text-align:center;*/
+}
+html { height: 100%; margin-bottom: 1px;}
+#bodi{opacity: 0}
+#bodi:hover{opacity: 1}
+/* begin Box, Sheet */
+.art-Sheet-body
+{
+	position: absolute;
+	z-index:1;
+	top: 281px;
+	left: 283px;
+	width: 841px;
+	height: 1200px;
+	/*padding: 10px;  отступ тексьта в рамке*/
+}
+.art-Sheet-tc, .art-Sheet-td, .art-Sheet-ti,  .art-Sheet-tf, .art-Sheet-tg, .art-Sheet-tk, .art-Sheet-tl
+{
+	position:absolute;
+	z-index: 1;
+	/*top: 144px; 
+	left: 1px;*/
+}
+.art-Sheet-tc
+{
+	left: 454px;
+	top: 143px;
+	width: 88px;
+	height: 252px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_14.jpg');
+}
+.art-Sheet-td
+{
+	left: 542px;
+	top: 184px;
+	width: 139px;
+	height: 211px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_17.png');
+}
+.art-Sheet-ti
+{
+	left: 681px;
+	top: 143px;
+	width: 89px;
+	height: 252px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_15.jpg');
+}
+.art-Sheet-tf
+{
+	left: 770px;
+	top: 184px;
+	width: 138px;
+	height: 211px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_18.png');
+}
+.art-Sheet-tg
+{
+	left: 908px;
+	top: 143px;
+	width: 90px;
+	height: 252px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_16.jpg');
+}
+@media print{
+	#pageContent{
+		content: 'Копирование материала только с согласия автора!';
+	}
+}
+.art-Sheet-tk
+{
+	left: 998px;
+	top: 184px;
+	width: 139px;
+	height: 211px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_19.png');
+}
+.art-Sheet-tl
+{
+	left: 1137px;
+	top: 142px;
+	width: 143px;
+	height: 253px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_12.jpg');
+}
+#r_menu{
+	position: absolute;
+	left: 1243px;
+	top: 183px;
+	z-index: 10;
+	list-style: none;
+	padding: 0;
+}
+#r_menu li {
+    background: white;
+    text-align: center;
+    padding: 50px 3px;
+    margin-bottom: 5px;
+    width: 79px;
+    box-shadow: 10px -3px 4px rgba(0, 0, 0, 0.52), inset 1px 0 2px rgba(0, 0, 0, 0.52);
+}
+#r_menu li:first-child{margin-left: -4px;}
+
+.art-Sheet-ta,  .art-Sheet-tb, .art-Sheet-tba, .art-Sheet-bl, .art-Sheet-bla, .art-Sheet-blb,
+.art-Sheet-br, .art-Sheet-bra, .art-Sheet-cl, .art-Sheet-cla, .art-Sheet-cr, .art-Sheet-cra, .art-Sheet-cc
+{
+	position:absolute;
+	z-index: 1;
+	/*top: 144px;
+	left: 1px;*/
+}
+.art-Sheet-ta
+{
+	top: 142px;
+	width: 187px;
+	height: 253px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_11.jpg');
+}
+.art-Sheet-tb
+{
+	left: 187px;
+	top: 143px;
+	width: 267px;
+	height: 252px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_13.jpg');
+} 
+.art-Sheet-tba
+{
+	left: 187px;
+	top: 73px;
+	width: 267px;
+	height: 70px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_09.png')
+}
+.art-Sheet-bl
+{
+	top: 395px;
+	width: 163px;
+	height: 631px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_20.jpg');	
+}
+.art-Sheet-bla
+{
+	top: 1023px;
+	width: 163px;
+	height: 472px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_27.jpg')
+}
+.art-Sheet-blb
+{
+	left: 163px;
+	top: 395px;
+	width: 120px;
+	height: 1100px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_24.jpg')
+}
+.art-Sheet-br
+{
+	left: 1156px;
+	top: 395px;
+	width: 124px;
+	height: 545px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_23.jpg');
+}
+.art-Sheet-bra
+{
+	left: 1156px;
+	top: 940px;
+	width: 124px;
+	height: 555px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_26.jpg')
+}
+.art-Sheet-cl
+{
+	top: 1495px;
+	width: 327px;
+	height: 68px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_30.jpg');
+}
+.art-Sheet-cla
+{
+	left: 327px;
+	top: 1495px;
+	width: 741px;
+	height: 43px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_31.jpg');
+}
+.art-Sheet-cr
+{
+	left: 1068px;
+	top: 1495px;
+	width: 212px;
+	height: 68px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_32.jpg');
+}
+.art-Sheet-cra
+{
+	left: 327px;
+	top: 1538px;
+	width: 741px;
+	height: 25px;
+	background-image: url('/assets/templates/Ummei/images/book/Skin-Book_33.jpg');
+}
+.art-Sheet-cc
+{
+	position:relative;
+	top: 395px;
+	left: 282px;
+	width: 874px;
+	height: 1100px;
+	background-image: url('/assets/templates/Ummei/images/book/Ummai.png');
+}
+.art-Sheet
+{
+	position:absolute;
+	width: 1303px;
+	top: 0; left: 0;
+	height: 1583px;
+	/*margin-top: 20px !important;*/
+	/*behavior: url(PIE.htc);*/
+	z-index: -1;
+}
+/*Ehd Box, Sheet*/
+.page
+{
+	width: 874px;
+	max-width: 875px;
+	height: 1150px;
+	max-height: 1151px;
+	margin:2px;
+	padding:50px 10px;
+	text-align:center;
+}
+.Pages-box{
+	position:fixed;
+	bottom: 0;
+	left: 36%;/* 40%100%*/
+	margin: 0 auto;
+	width:577px;/**/
+	height:60px;
+	z-index:5;
+	opacity: .8;
+}
+img {border: none;}
+ul#topnav {
+	padding: 0;
+	list-style: none;
+	font-size: 1.1em;
+	font-family:"Comic Sans MS", cursive;
+	text-shadow:#999 0 0 3px;
+	text-align: center;
+	clear: both;
+	float: left;
+	z-index:1;
+	width: 762px;
+	height: 302px;
+	position: absolute;
+	top: 0px;
+	left: 542px;
+}
+ul#topnav li{
+	margin-right: 87px;
+	padding: 0;
+	overflow: hidden;
+	float: left;
+	height:286px;
+}
+ul#topnav a, ul#topnav span {
+	padding: 0 50px;
+	float: left; 
+	text-decoration: none; 
+	/*color: #06F;*/
+	/*text-transform: uppercase;*/
+	clear: both;
+	height: 143px;/*143px*/
+	line-height: 20px;
+	background: #fff; 
+}
+ul#topnav a { color: #000; }
+ul#topnav span {
+	display: none;
+}
+
+ul#topnav.v2 span{
+	width: 41px;
+	background: url(/assets/templates/Ummei/images/book/Skin_Book.png) repeat-x left top;
+}
+ul#topnav.v2 a{
+	width: 41px;
+	color: #000;
+	background: url(/assets/templates/Ummei/images/book/Skin_Book.png) repeat-x left bottom;
+}
+
+#bgimg {
+	position:fixed;
+	z-index: -10;
+	/*background-repeat:no-repeat;*/
+}
+
+
+#realBody{
+	position:fixed;
+	z-index: -5;				
+	overflow:auto; 			
+	height:100%;width:100%;	
+	background: url(/assets/templates/Ummei/images/book/raster.png); 
+}
+
+
+.clear{
+	clear:both;
+}
+
+
+#rounded{
+	width:800px;
+	margin:20px auto;
+	text-align:left;
+}
+
+.container{
+	background-color:#FFFFFF;
+	padding:10px 20px 20px 20px;
+}
+
+@font-face 
+{
+	src: url("../font/Pushkin.ttf"); 
+	font-family: Pushkin;
+}
+#pageContent, .list{
+	/*background:#DDD;*/
+	cursor:default;
+	display: block;
+	font-size: 21px;/*22px*/
+	font-weight: normal;	
+	font-style: normal;
+	line-height: 27px; /*высот строки*/
+	text-indent: 5px; /*величину отступа первой строки*/
+	text-align : justify;
+	/*word-spacing: 20px;*/
+
+	white-space: pre-wrap;       /*CSS 2.1/3*/ /* обрабатывать символы пробелов*/
+    white-space: -moz-pre-line;  /*Mozilla wrap*/ 
+	white-space: -hp-pre-line;   /*HP printers*/ 
+	white-space: -o-pre-line;    /*Opera 7*/ 
+	white-space: -pre-line;      /*Opera 4-6*/ 
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
+#pageContent {
+	position:absolute;
+	left:0px;
+	/*opacity: 1;*/
+	width: 860px;/*900px 850px*/
+	/*overflow:hidden;
+	text-overflow: ellipsis;*/
+	height: 1238px;
+	top: -40px;
+}
+#pageContent > h1, .list > h1{
+	/*vertical-align: middle;*/
+	margin-bottom:-50px;
+	line-height: 45px;
+	font-family: Pushkin;
+	font-size: 35px;
+	font-weight: bold;
+	font-style: normal;
+}
+#noscript > h1{
+	margin-bottom:-10px;
+	margin-top:-120px;
+	line-height: 45px;
+	font-size: 35px;
+}
+#pageContent > a {
+	text-shadow:1px 2px 3px  #939393;
+	text-decoration:none; color:inherit;}
+#loading{
+	background: url(/assets/templates/Ummei/images/book/ajax_load.gif);
+	visibility:hidden;
+	position: absolute;
+	bottom: 60px;/*60*/
+	width:79px;
+	height:64px;
+	left: 134px;
+}
+.list{
+	background: url('/assets/templates/Ummei/images/book/Ummai.png') #FFF 90px 209px no-repeat;
+	opacity: 0.7;
+	visibility:hidden;
+	position:absolute;
+	z-index: 100;
+	width: 810px;
+	height: 1237px;
+	left: 1px;
+	top: 115px;
+	margin: -210px 0 -33px -92px;
+	border-right: 71px solid #FFF;
+	border-bottom: 36px solid #FFF;
+	padding: 55px 63px 18px 91px;
+	overflow: hidden;
+}
+/*#blockrandom{position:absolute; width: 774px;height: 549px; bottom: 20%;left: 20%; border: none; overflow:hidden;}*/

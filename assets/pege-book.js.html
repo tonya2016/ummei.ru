@@ -1,0 +1,87 @@
+$(function() {
+    $('#bodi, center').on('blur', list);
+    $(document).keydown(function(e){
+        if(e.keyCode == 17) list();
+        if(e.keyCode == 44) list();
+        if(e.keyCode == 154) list();
+    });
+    function list(){$('#pageContent').html('Копирование материала только с согласия автора!');}
+    function return_(){$('#pageContent').html($('#pageContent').data('list'));};
+    document.onclick = function(){return_();};    
+});
+
+
+$(function(){
+    var Cooki = $.cookie('Page');
+    if (!Cooki) Cooki = 1;
+    var numb = $.cookie('number');
+    if (!numb) numb = 300;
+    $("#Pages").paginate({
+                count       : numb,
+                start       : Cooki,
+                display     : 10,
+                border                  : false,
+                text_color              : '#888',    //888
+                background_color        : '#fff',   //fff
+                text_hover_color        : 'black',    //black
+                background_hover_color  : '#7F0709',    //CFCFCF
+                onChange                : function(page){
+            $('._current','#pagination').removeClass('_current').hide();
+            $('#p'+page).addClass('_current').hide();
+            $('body,html').animate({'scrollTop': 0}, 5000);
+        }
+    });
+    if(window.location.hash.replace('/book/pege-book.js.html#!page','') != Cooki)
+    window.location.hash = '#!page'+Cooki;
+    var varr;
+    varr = window.location.href.replace(window.location.search+window.location.hash, '')+'#!page'+Cooki;
+    window.location = varr;
+    $('ul li a').one('click', function (e){checkURL(this.hash);});
+    setInterval("checkURL()",250);
+});
+var lasturl="";
+function checkURL(hash)
+{
+    if(!hash) hash = window.location.hash;
+    if(hash != lasturl)
+    {
+        lasturl=hash;
+        // FIX - if we've used the history buttons to return to the homepage,
+        // fill the pageContent with the default_content
+        if(hash!="") loadPage(hash);
+    }
+}
+function loadPage(url)
+{
+    
+    var url = 'page='+url.replace('#!page','');
+
+    _gaq.push(['_trackPageview', url]);
+    _gaq.push(['_gat.anonymizeIp']);
+    
+    $('#loading').css('visibility','visible');
+    $.ajax({
+        type: "POST",
+        url: 'book/load_page.html',
+        data: url,
+        dataType: "html",
+       /* async: false,*/
+        success: function(msg, xhr){
+            var msg = MD5(msg);
+            if(parseInt(msg)!= 0){
+                $('.list').css('visibility','visible').html($('.list').data('list')).effect("drop",{direction: "left",easing: 'easeOutExpo'},1000).removeData('list');
+                $('#pageContent').html(msg);
+                $('#pageContent').data('list', msg);
+            }else{    
+                $(".list").css('visibility','hidden');
+                $('#pageContent').html('<h1>       Большое колличество посетителей на сайте.<br>       Идёт загрузка ожидайте!</h1>');
+                $.getScript('book/freim.js.html');
+                $('#pageContent').ajaxError(function(){
+                    $(this).html('<h1>        Просим прощения за технические неполадки, </br>которые будут устранены в ближайшее время!</h1>123456');
+                });
+            }
+        },
+        complete: function(){$('#loading').css('visibility','hidden');}
+    });
+    $('.list').data('list', $('#pageContent').html());
+}(jQuery);
