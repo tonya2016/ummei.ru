@@ -1,0 +1,505 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 transitional//RU" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru" style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="книги детективы, книга онлайн, читать онлайн, читаем детектив, хороший детектив, современный детектив, современные авторы, российский детектив, книга детектив, детектив читать онлайн">
+	<meta name="description" content="Читаем детективы современных авторов на литературном сайте. Общаемся на разные темы на форуме 2017. Без регистрации читаем детективы онлайн.">
+<title>Читаем детективы онлайн|форум 2017 на разные темы</title>
+
+<base href=".">
+
+
+<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/assets/favicon.png">
+<link rel="image_src" href="/assets/favicon.png">
+<!--<script type="text/javascript" src="assets/scripts/js/jquery-1.7.2.min.js"></script>-->
+<script type="text/javascript" src="assets/jquery.min.js"></script>
+<!--<script type="text/javascript" src="assets/scripts/js/swfobject.js"></script>-->
+<script type="text/javascript" src="assets/jquery.cookie.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="assets/header.css">
+<link rel="stylesheet" type="text/css" media="screen" href="assets/style-my-tooltips.css">
+
+<script type="text/javascript">
+window.onerror = function(message, source, lineno) { return true;};
+
+setTimeout(function(){$("body,html").scrollTop(0);}, 5000);
+if($.browser.mozilla)
+document.addEventListener("MozMousePixelScroll", function(){$("body,html").stop();}, false);
+else
+document.onmousewheel = document.onwheel = function(){$("body,html").stop();};
+document.onkeydown = function(e){
+    if(e.keyCode >= 33 && e.keyCode <= 40){
+        $("body,html").stop();
+    }
+}
+
+$(document).ready(function() {
+    var bgImage = $('#loider');
+    function resizeImg() {
+        var imgwidth = bgImage.width(),
+        imgheight = bgImage.height(),
+        winwidth = $(window).width(),
+        winheight = $(window).height(),
+        widthratio = winwidth / imgwidth,
+        heightratio = winheight / imgheight,
+        widthdiff = heightratio * imgwidth,
+        heightdiff = widthratio / imgheight;
+        if(heightdiff>winheight) {
+            bgImage.css({
+                width: winwidth+'px',
+                height: heightdiff+'px'
+            });
+        } else {
+            bgImage.css({
+                width: widthdiff+'px',
+                height: winheight+'px'
+            });
+        }
+        $("#loider").show();
+    }
+    resizeImg();
+    $(window).resize(function() {
+        resizeImg();
+    });
+});
+
+</script>
+<script type="text/javascript">
+var  t = 49104,
+     tim = (new Date).getTime();
+function now(){
+    var time = (new Date).getTime();
+    if((time - tim) < t)
+    setTimeout('now()', 100);
+    if((document.readyState != 'complete') && (time - tim) > t)//interactive
+    location.reload();
+}
+now();
+
+var  percent = 1,
+     timePeriod = 100;
+function progressBar()
+{
+    var time = (new Date).getTime();
+    if(percent < 100)
+    {
+        percent++;
+        $('#loader').html(percent+'%');
+        setTimeout ("progressBar()", timePeriod);
+    }
+
+}
+progressBar();
+$(window).load(function(){
+    $('#pre').slideUp(500, function(){
+        $(this).remove();
+        //create();/////////////////////////////
+    });
+});
+</script>
+
+<script type="text/javascript" src="assets/jquery.jcryption.js"></script>
+
+<script type="text/javascript" src="assets/auth.js.html"></script><!--/auth.js-->
+
+<!--<script type="text/javascript" src="/index/mail.js.html"></script>mail.js-->
+
+<!--<script type="text/javascript" src="assets/scripts/js/custom00.js"></script>-->
+
+<!--Подсведка букв-->
+<script src="assets/jquery.blend.js"></script>
+
+<!--Светящиеся буквы -->
+<script src="assets/jquery.color.js" type="text/javascript"></script>
+<script src="assets/jquery-glowing.js" type="text/javascript"></script>
+<script src="assets/formbox.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="assets/jquery.style-my-tooltips.js"></script>
+
+
+<script type="text/javascript">
+var jsReady  = false,
+    swfReady = false;
+
+function jsGetReady(){
+  return jsReady;
+}
+function jsSetReady(){
+  jsReady  = true;
+}
+function swfSetReady(){
+  swfReady = true;
+}
+function swfMovie(movieName){
+  if(navigator.appName.indexOf("Microsoft") != -1)
+    return window[movieName];
+  return document[movieName];
+}
+function E(cc){
+  return (typeof(cc)!='object')? document.getElementById(cc) : cc;
+}
+$(function (){
+    $('div[class^=Book]').each(function(){//перебераем все классы Book_
+        $(this).click(function(){
+          //  var book = $(this).attr('class');// получаем имя класса Book_X по клику
+          //  console.log($(this).index())
+            var book = $(this).index() % 2 ? 'odd' : 'even';
+            var obj = swfMovie("movie");
+            if(swfReady && obj){
+                // если flash готов, вызываем функции action script
+                obj.putAction(1);//передаём текстовую "1" в Флеш действия
+            }
+            var dela = !ver ? 0:5800;//ver = swfobject.hasFlashPlayerVersion("10");
+            $('.overlay,#Stora').fadeOut(1000)/*.delay(dela)*/.queue(function(){/////////////////////////////
+                var url = '';
+                switch (book){
+                   /* case 'Book_1':
+                    case 'Book_3'://для пропуска
+                    case 'Book_6':// через одну
+                        url = "/book.html" //записи типа[~'+book+'~] не понимаются в CMS
+                        if(($.cookie('indeks'))==null)$.cookie('indeks', 2,{expires: 7, path: '/', domain: ''});*/
+                    case 'even':// через одну
+                        url = "/book_2.html"
+                        if($.cookie('resurs') != 112){
+                            $.cookie('resurs', 112,{expires: 7, path: '/', domain: ''});
+                            $.cookie('Page', 1,{expires: 7, path: '/', domain: ''});
+
+                        }
+                        if(($.cookie('indeks'))==null) $.cookie('indeks', 2,{expires: 7, path: '/', domain: ''});
+                    break
+                    default:
+                        url = "/book.html"
+                        if($.cookie('resurs') != 6){
+                            $.cookie('resurs', 6,{expires: 7, path: '/', domain: ''});
+                            $.cookie('Page', 1,{expires: 7, path: '/', domain: ''});
+                        }
+                }
+                document.cookie = 'pageVisits=;expires=-1;';
+                /*$.cookie('pageVisits', "", {expires: -1}) $.removeCookie('pageVisits');*/
+                window.location.href = url;
+            });
+        });
+    });
+});
+$(window).load(function(){jsSetReady();});
+</script>
+<!--Подсказки-->
+<script type="text/javascript">
+$(function() {
+    //applies to all elements with title attribute. Change to ".class[title]" to select only elements with specific .class and title
+    $("[title]").style_my_tooltips({
+        tip_follows_cursor: "on", //on/off
+        tip_delay_time: 1000 //milliseconds
+    });
+});
+
+</script>
+
+<script type="text/javascript">
+$(function(){
+    //--Подсведка букв--
+    $("#example a").blend();
+    //--Светящиеся буквы--
+    $('.white').addGlow();
+    $('.green').addGlow({ textColor: '#0f0', haloColor: '#0f0', radius: 100 });
+    $('.blue').addGlow({ textColor: '#00f', haloColor: '#00f', radius: 100 });
+    $('.yelou').addGlow({ textColor: '#ff0', haloColor: '#ff0', radius: 100 });
+    $('.lait-blue').addGlow({ textColor: '#0ff', haloColor: '#0ff', radius: 100 });
+    $('.purpure').addGlow({ textColor: '#f0f', haloColor: '#f0f', radius: 100 });
+    $('.orang').addGlow({ textColor: '#FF8040', haloColor: '#FF8040', radius: 100 });
+})
+
+//--Увеличение книги--
+
+$(function(){
+$('.limp').css('opacity','0');
+    $('.limp').each(function(){
+        $(this).hover(function(){
+            $(this).stop().animate({
+                opacity:'1.0',
+                width: '197px',
+                height: '276px',
+                border:'0',
+                marginTop: '0',
+                marginLeft: '0'
+                /*'z-index':'8'*/
+            }, 600);
+        },
+        function(){
+            $(this).stop().animate({
+                opacity:'0',
+                width: '154px',
+                height: '217px',
+                border:'0',
+                marginTop: '25px',
+                marginLeft: '25px'
+                /*'z-index':'-6'*/
+            }, 600);
+        });
+    });
+});
+//--------------------------------------
+$(function() {
+$('h1').hover(function(){//, body
+    $('.dask_1').stop().fadeTo({queue:false,duration:800,easing:'swing'},1);
+        $('h1').stop().animate({
+            width: '426px',
+            height: '514px',
+            marginTop: '-75px',
+            marginLeft: '-75px',
+            'font-size': '22px'
+        },
+        {
+            queue:false,
+            duration:300
+        });
+    },
+    function(){
+    $('.dask_1').stop().fadeTo({queue:false, duration:300},0);
+        $('h1').stop().animate({
+            width: '276px',
+            height: '364px',
+            marginTop: '0px',
+            marginLeft: '0px',
+            'font-size': '15px'
+        },
+        {
+            queue:false,
+            duration:300,
+            easing:'swing'
+        });
+    });
+});
+</script>
+
+<!--добавить в избраные-->
+<script>
+function getBrowserInfo() {
+    var t,v = undefined;
+
+    if (window.chrome) t = 'Chrome';
+    else if (window.opera) t = 'Opera';
+    else if (document.all) {
+        t = 'IE';
+        var nv = navigator.appVersion;
+        var s = nv.indexOf('MSIE')+5;
+        v = nv.substring(s,s+1);
+    }
+    else if (navigator.appName) t = 'Netscape';
+
+    return {type:t,version:v};
+}
+
+function bookmark(a){
+    var url = window.document.location;
+    var title = window.document.title;
+    var b = getBrowserInfo();
+
+    if (b.type == 'IE' && 8 >= b.version && b.version >= 4) window.external.AddFavorite(url,title);
+    else if (b.type == 'Opera') {
+        a.href = url;
+        a.rel = "sidebar";
+        a.title = url+','+title;
+        return true;
+    }
+    else if (b.type == "Netscape") window.sidebar.addPanel(title,url,"");
+    else alert("Нажмите CTRL-D, чтобы добавить страницу в закладки.");
+    return false;
+}
+</script>
+
+
+<div id="movie"></div>
+
+<div id="plus"><img src="assets/18+.png"></div>
+<div id="Stora">
+
+<div class="overlay">
+
+<div class="Fon1"></div>
+<div class="Fon2"></div>
+<div class="Fon3"></div>
+<div class="Fon4"></div>
+<div class="Fon5"></div>
+  <div id="container" class="png-fix">
+
+    <div class="Fon_hait1"></div>
+    <div class="Fon_hait2"></div>
+    <div class="Fon_hait3"></div>
+    <div class="Fon_hait4"></div>
+    <div class="Fon_hait5"></div>
+
+    <div class="Fon_low1"></div>
+    <div class="Fon_low2"></div>
+    <div class="Fon_low3"></div>
+    <div class="Fon_low4"></div>
+    <div class="Fon_low5"></div>
+
+    <div class="im_1"></div>
+    <div class="im_2"></div>
+    <div class="im_3"></div>
+    <div class="im"><img src="assets/URL.png">
+UMMEI.RU<p>Авторский проект</p></div>
+<script type="text/javascript">
+<!--
+var request = false;
+try {
+    request = new XMLHttpRequest();
+} catch (error) {
+    try {
+        request = new ActiveXObject("Msxml2.XMLHTTP");
+    } catch (error) {
+        try {
+            request = new ActiveXObject("Microsoft.XMLHTTP");
+        } catch (error) {
+            request = false;
+        }
+    }
+}
+
+if (!request){
+    alert("Error: Ваш браузер не поддерживает Ajax");
+}
+function updateList() {
+    if (request.readyState == 4) {
+        if (request.status == 200) {
+            document.getElementById("onlinebox").innerHTML=request.responseText;
+        } else {
+           // alert("Error " + request.status);
+        }
+    }
+}
+function showList() {
+    var url = "modxbb/onlinelist.php";
+    request.open("POST", url, true);//GET
+    request.onreadystatechange = updateList;
+    request.send(null);
+}
+showList();
+setInterval(showList, 10000);
+//-->
+</script>
+
+<div id="onlinebox"> Гость: 1, зарегистрированные пользователи: нет зарегистрированных пользователей
+<br><span>Легенда: <a style="color:#AA0000" href="/forum/memberlist.php?mode=group&amp;g=5">Администраторы</a>, <a style="color:#00AA00" href="/forum/memberlist.php?mode=group&amp;g=4">Супермодераторы</a></span></div>
+<div class="latestposts"><h4>Последние сообщения форума</h4><div> <a href="/forum/topic3579-28694.html#p28694">Re: Безумная страсть Джойс МакКинни</a><br><p> А ну, парни! Кто хочет, чтоб я  его похитила, признавайся!!! :idea:
+Фома, ты как насчёт?  ;) Я - вольный орел и никогда не буду смотреть на небо через крупную клетку!</p><br><strong>Фома Хаецкий</strong> » Вс - фев 19 - 11:11 </div><div> <a href="/forum/topic3575-28688.html#p28688">Re: Демодекоз у собак</a><br><p> Девчонки-мальчишки, а я  вам могу сказать хорошую новость. Мы были у доктора, нам сделали соскоб. И... в результате,  ничего не нашли! Нет у нас никакого демодекоза. Врач  сказал, что скорее в...</p><br><strong>Светик</strong> » Вс - фев 19 - 7:57 </div><div> <a href="/forum/topic3579-28687.html#p28687">Re: Безумная страсть Джойс МакКинни</a><br><p>Да у девки с мозгами что-то не то явно было. Что-то вроде помешательства. С головой не дружила.</p><br><strong>Варвара Краса</strong> » Вс - фев 19 - 7:50 </div><div> <a href="/forum/topic3579-28686.html#p28686">Re: Безумная страсть Джойс МакКинни</a><br><p>Любовь? А где любовь? В чём заключается разница между любовью и страстью? Страсть - желание близких отношений любой  ценой. Одурманенный  страстью человек не думает об объекте страсти. Т.е. дум...</p><br><strong>Лаванда</strong> » Вс - фев 19 - 7:48 </div><div> <a href="/forum/topic3579-28685.html#p28685">Re: Безумная страсть Джойс МакКинни</a><br><p>А ну, парни! Кто хочет, чтоб я  его похитила, признавайся!!! :idea:
+Фома, ты как насчёт?  ;)</p><br><strong>Светик</strong> » Вс - фев 19 - 7:46 </div><div> <a href="/forum/topic3193-28683.html#p28683">Re: Смешные кошки</a><br><p>  060.jpg  </p><br><strong>Алиса Лисова</strong> » Вс - фев 19 - 7:07 </div></div>
+     <div id="example">
+
+<div id="edgesline" class="edges"></div>
+
+    <div id="tabButtons">
+
+    <ul id="tabMenu" class="tab">
+
+    <li class="regular"><a style="color: rgb(255, 0, 0); line-height: 80%; position: relative;" class="white hover jQblend" href="/" id="example_home"><span style="position: absolute; top: 0px; left: 0px; display: block; background-color: rgba(0, 0, 0, 0); background-image: url(&quot;/assets/images/header/nav-sprite.png&quot;); background-repeat: no-repeat; background-attachment: scroll; background-position: 0% 0%; padding: 0px; width: 150px; height: 48px;"></span><span><p><br></p>Главная</span></a></li>
+
+    <li class="dropdown"><a style="color: rgb(255, 255, 255); line-height: 80%; position: relative; text-shadow: none;" class="green hover jQblend" href="/#tab1" onclick="return false" id="example_blog" target="_blank"><span style="position: absolute; top: 0px; left: 0px; display: block; background-color: rgba(0, 0, 0, 0); background-image: url(&quot;/assets/images/header/nav-sprite.png&quot;); background-repeat: no-repeat; background-attachment: scroll; background-position: 0% 0%; padding: 0px; width: 150px; height: 48px; opacity: 1;"></span><span><p><br></p>Авторизация</span></a></li>
+
+    <li class="regular"><a style="color: rgb(255, 255, 255); line-height: 80%; position: relative; text-shadow: none;" class="blue hover jQblend" href="/forum/ucp.php?mode=register" id="example_demo"><span style="position: absolute; top: 0px; left: 0px; display: block; background-color: rgba(0, 0, 0, 0); background-image: url(&quot;/assets/images/header/nav-sprite.png&quot;); background-repeat: no-repeat; background-attachment: scroll; background-position: 0% 0%; padding: 0px; width: 150px; height: 48px; opacity: 1;"></span><span><p><br></p>Регистрация</span></a></li>
+
+                <!--target="_blank" новая вкладка -->
+    <li class="regular"><a style="color: rgb(255, 255, 255); line-height: 80%; position: relative;" class="lait-blue hover jQblend" href="/forum.html" id="example_about" title="Форум предлагает набор разделов для обсуждения и решение каких-то вопросов по определенной теме"><span style="position: absolute; top: 0px; left: 0px; display: block; background-color: rgba(0, 0, 0, 0); background-image: url(&quot;/assets/images/header/nav-sprite.png&quot;); background-repeat: no-repeat; background-attachment: scroll; background-position: 0% 0%; padding: 0px; width: 150px; height: 48px;"></span><span ><p><br></p>Форум</span></a></li>
+                <!--book/freim.css.html-->
+    <li class="regular"><a style="color: rgb(255, 255, 255); line-height: 130%; position: relative; text-shadow: none;" class="orang hover jQblend" href="/personal-cabinet-by-the-author.html" id="example_contact" title="Раздел для личных сообщений автору"><span style="position: absolute; top: 0px; left: 0px; display: block; background-color: rgba(0, 0, 0, 0); background-image: url(&quot;/assets/images/header/nav-sprite.png&quot;); background-repeat: no-repeat; background-attachment: scroll; background-position: 0% 0%; padding: 0px; width: 150px; height: 48px; opacity: 1;"></span><span >Личный кабинет автора</span></a></li>
+
+    <li class="regular"><a style="color: rgb(255, 255, 255); line-height: 130%; position: relative; text-shadow: none;" class="purpure hover jQblend" href="/javascriptvoid0.html" onclick="return bookmark(this);" id="example_services" title="Адрес сайта вносится в закладки браузера!"><span style="position: absolute; top: 0px; left: 0px; display: block; background-color: rgba(0, 0, 0, 0); background-image: url(&quot;/assets/images/header/nav-sprite.png&quot;); background-repeat: no-repeat; background-attachment: scroll; background-position: 0% 0%; padding: 0px; width: 150px; height: 48px; opacity: 1;"></span><span >Добавить в избранное</span></a></li><!--javascript:void(0);-->
+
+    <li class="dropdown"><a style="color: rgb(255, 255, 255); line-height: 130%; position: relative;" class="yelou hover jQblend" href="/#tab2" onclick="return false" id="example_services"><span style="position: absolute; top: 0px; left: 0px; display: block; background-color: rgba(0, 0, 0, 0); background-image: url(&quot;/assets/images/header/nav-sprite.png&quot;); background-repeat: no-repeat; background-attachment: scroll; background-position: 0% 0%; padding: 0px; width: 150px; height: 48px;"></span><span >Служба поддержки</span></a></li>
+          </ul>
+
+   </div>
+</div>
+
+
+    <div id="tabContainer">
+    <ul id="tabPanes" style="margin-left: 108px; height: 0px;">
+
+        <li id="tab2" style="position: absolute;">
+            <p></p>
+           <!--!ajaxSubmit? &container=`#feedbackForm`&form=`#mail`&noJQuery=`1`!-->
+            <div id="feedbackForm">
+
+
+<form class="formcontainer" id="mail" method="post" action="/">
+ <input type="hidden" name="mail" value="mail">
+    <!--<form id="formcontainer">-->
+    <div class="text">
+        <label for="email" id="emaill">email</label>
+        <input type="text" name="email" id="email" placeholder="name@email" value="">
+    </div>
+    <div class="text">
+        <label for="message">Сообщение</label>
+        <textarea rows="3" name="comments" id="message" placeholder="Прежде чем обратится в службу поддержки, попробуйте найти свой ответ, в разделе „Вопрос ответ“!"></textarea>
+    </div>
+    <div class="block" id="bluebutton">
+        <button id="submit_1" name="submit" type="submit" title="Прежде чем обратится в службу поддержки, попробуйте найти свой ответ, в разделе „Вопрос ответ“!" class="">Отправить</button>
+
+    </div>
+    <!--<input type="hidden" name="formid"  value="mail" /></form>-->
+<input type="hidden" name="formid" value="mail"></form>
+<div class="block" id="bluebutton">
+    <button style="margin-left: 10px;" onclick="window.location=&#39;forum/faq.php&#39;" title="Часто задаваемые вопросы" class="">Вопрос ответ</button>
+</div>
+            </div>
+        </li>
+    <li id="tab1" style="position: absolute; display: list-item;">
+            <p></p>
+                <form class="formcontainer" action="/forum/ucp.php?mode=login">
+                    <div class="text">
+                        <label for="username">Логин</label>
+                        <input type="text" name="username" id="usernames">
+                    </div>
+                    <div class="text">
+                        <p></p>
+                        <label for="password">Пароль</label>
+                        <input type="password" name="password" id="passwords">
+                    </div>
+                    <div class="text">
+                        <p></p>
+                        <input type="checkbox" name="autologin" id="autologin"> Запомнить меня
+                    </div>
+                    <div class="block" id="bluebutton"><!--type="submit" -->
+                        <button id="submit" type="submit" name="login" class="">Войти</button><br>
+                        <button onclick="window.location=&#39;forum/ucp.php?mode=sendpassword&#39;" class="">Я забыл пароль</button>
+                    </div>
+                </form>
+        </li></ul>
+</div>
+
+<div class="Book_1"><img src="assets/image/header/1.png" class="limp" title="Эту книгу нужно прочесть! Ваша книга может быть здесь." ></div>
+<div class="Book_2"><img src="assets/image/header/2.png" class="limp" title="Эту книгу нужно прочесть! Ваша книга может быть здесь." ></div>
+<div class="Book_3"><img src="assets/image/header/1.png" class="limp" title="Эту книгу нужно прочесть! Ваша книга может быть здесь." ></div>
+<div class="Book_4"><img src="assets/image/header/2.png" class="limp" title="Эту книгу нужно прочесть! Ваша книга может быть здесь." ></div>
+<div class="Book_5"><img src="assets/image/header/1.png" class="limp" title="Эту книгу нужно прочесть! Ваша книга может быть здесь." ></div>
+<div class="Book_6"><img src="assets/image/header/2.png" class="limp" title="Эту книгу нужно прочесть! Ваша книга может быть здесь." ></div>
+<div class="Book_7"><img src="assets/image/header/1.png" class="limp" title="Эту книгу нужно прочесть! Ваша книга может быть здесь." ></div>
+<div class="Book_8"><img src="assets/image/header/2.png" class="limp" title="Эту книгу нужно прочесть! Ваша книга может быть здесь." ></div>
+<div class="Book_9"><img src="assets/image/header/1.png" class="limp" title="Эту книгу нужно прочесть! Ваша книга может быть здесь." ></div>
+<div class="Book_10"><img src="assets/image/header/2.png" class="limp" title="Эту книгу нужно прочесть! Ваша книга может быть здесь." ></div>
+
+<div class="dask_1"></div>
+<h1><p>&nbsp;</p>Доска объявлений<p>&nbsp;</p>
+<!--<a href="/forum/literaturniy-konkurs-f5/srochno-trebuutsya-novie-avtori-t6.html"><p>&nbspЛитературный конкурс</p></a>-->
+<p>«Уммэй» в переводе с японского -</p>
+<p>&nbsp;Судьба, Участь.</p>
+<p>&nbsp;</p>
+<p>
+"Судьба неизбежнее, чем случайность.</p>
+<p>Судьба заключена в характере."</p>
+<p>&nbsp;</p>
+<p>&nbsp;Из «Слов пигмея» Акутагава Рюноскэ.
+</p></h1></div>
+<div id="adres"><span>© 2013</span>
+
+
+<div style="width: 88px; height: 31px; border: 1px solid rgb(143, 188, 188); background-image: url(&#39;assets/images/NoFolloW.jpg&#39;); display: inline-block;" id="z456123" class="x321456">
+<a style="width: 88px;height: 31px; display: block;" href="http://www.nofollow.ru/" rel="dofollow" id="z123456" class="x321654" target="_blank"></a>
+</div>
+
+<a href="http://www.openlinks.ru/" target="_blank"><img src="assets/openlinks.gif" alt="Каталог сайтов OpenLinks.RU" border="0" width="88" height="31" style="display: none !important;"></a>
+<a href="http://www.alexa.com/siteinfo/ummei.ru"><script type="text/javascript" src="assets/a" style="display: none !important;"></script></a>
+</div>
+
+</div></div>
+
+</body></html>
