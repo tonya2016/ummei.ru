@@ -60,8 +60,8 @@ $(function() {
 });
 </script>
 <!--передаёв сообщение-->
-<script language="javascript" type="text/javascript" src="assets/plugins/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
-<script language="javascript" type="text/javascript" src="/assets/plugins/tinymce/js/xconfig.js"></script>
+<script language="javascript" type="text/javascript" src="assets/tiny_mce.js"></script>
+<script language="javascript" type="text/javascript" src="assets/xconfig.js"></script>
 <script type="text/javascript">
 
   //  storeCurTemplate();
@@ -92,7 +92,7 @@ tinyMCE.init({
     width                            : '595',
     height                           : '619',
     language                         : 'ru',
-    document_base_url                : 'http://ummei.ru/personal-cabinet-by-the-author.html',
+    document_base_url                : 'personal-cabinet-by-the-author.html',
     relative_urls                    : true,
     remove_script_host               : true,
     convert_urls                     : true,
@@ -230,7 +230,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
     <div class="list"></div>
     <!--!NewArticleEvent!-->
 
-    <form id="email" method="post" action="/personal-cabinet-by-the-author.html">
+    <form id="email" method="post" action="/">
     <input type="hidden" name="formid"  value="email" />
     <div class="button_">
 
