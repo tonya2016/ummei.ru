@@ -1,7 +1,7 @@
 *{margin:0;padding:0;}
-.cab{background:url(/assets/templates/Ummei/images/cabinet/Kabinet_A.jpg) #59200d 0 0;height:100%;width:100%;position:fixed; overflow-y:auto;overflow-x: hidden;}
+.cab{background:url(image/cabinet/Kabinet_A.jpg) #59200d 0 0;height:100%;width:100%;position:fixed; overflow-y:auto;overflow-x: hidden;}
 #boddy{
-	background: url(/assets/templates/Ummei/images/cabinet/Kabinet.jpg) no-repeat ;
+	background: url(image/cabinet/Kabinet.jpg) no-repeat ;
 	background-origin: padding-box;
 	top:0;
 	width:1536px;
@@ -15,7 +15,7 @@
 	margin:48px 0 0 646px;/*402px;*/
 }
 .wumen{
-	background:url(/assets/templates/Ummei/images/cabinet/Gerl.jpg) no-repeat #fff 0 101px;
+	background:url(image/cabinet/Gerl.jpg) no-repeat #fff 0 101px;
 }
 .list, .wumen{
 	position:absolute;
@@ -31,7 +31,7 @@
 	background: #EEE;
 }
 .book{
-	background:url(/assets/templates/Ummei/images/cabinet/Editbook.jpg) no-repeat;
+	background:url(image/cabinet/Editbook.jpg) no-repeat;
 	width: 1280px;
 	height: 839px;
 	position:relative;
@@ -158,23 +158,23 @@ opacity: 1 !important;
 .mceToolbar{opacity: .8;}
 
 .button_{
-	background:url(/assets/templates/Ummei/images/cabinet/buttan.png) no-repeat;
+	background:url(image/cabinet/buttan.png) no-repeat;
 	width:153px;height:154px;
 	position:absolute;
 	left: 400px;bottom: 67px;
 	border: none;cursor:pointer;
 }
 #submit{
-	background:url(/assets/templates/Ummei/images/cabinet/buttan.jpg) no-repeat;
+	background:url(image/cabinet/buttan.jpg) no-repeat;
 	width:120px;height:55px;
 	position:absolute;left:20px;
 	top: 57px;border: none;
 }
-#submit:hover{background:url(/assets/templates/Ummei/images/cabinet/HoverButtan.jpg) no-repeat;}
-#submit:active {background:url(/assets/templates/Ummei/images/cabinet/KlickButtan.jpg) no-repeat;}
+#submit:hover{background:url(image/cabinet/HoverButtan.jpg) no-repeat;}
+#submit:active {background:url(image/cabinet/KlickButtan.jpg) no-repeat;}
 
 .tab{
-	
+
 	z-index: 10;
 	width:508px;
 	/*top: 58px;*/
@@ -189,13 +189,13 @@ opacity: 1 !important;
 	height:48px;
 	margin-right: 10px;
 	float:left;
-	background:url(/assets/templates/Ummei/images/cabinet/nav-sprite.png) no-repeat;
+	background:url(image/cabinet/nav-sprite.png) no-repeat;
 	cursor:pointer;	/*text-indent:-9999px;*/
 	/*top: 610px;*/
 }
 
-a 
-{	
+a
+{
 	margin: 0.4em auto;
 	font-size: 20px;
 	font-family: Pushkin;
@@ -204,7 +204,7 @@ a
 	text-decoration: none;
 	color: #777;
 }
-a.glowing 
+a.glowing
 {
 	color: #0af;
 }
