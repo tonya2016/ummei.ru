@@ -1,0 +1,259 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 5 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный кабинет автора</title>
+<meta name="description" content="0">
+<meta name="keywords" content="0">
+<link href="assets/templates/Ummei/styles/cabinet.css" type="text/css" rel="stylesheet"/>
+<link href="assets/templates/Ummei/styles/style-my-tooltips.css" type="text/css" rel="stylesheet"/>
+<!--  &CSSfile=`` minifyCss &API=`(js)`-->
+<!--!MinifyX? &JSfile=`assets/templates/Ummei/scripts/js/jquery-1.7.2.min.js,assets/templates/Ummei/scripts/js/jquery.color.js,assets/templates/Ummei/scripts/js/jquery.blend.js,assets/templates/Ummei/scripts/js/jquery-glowing.js,assets/templates/Ummei/scripts/js/jquery.style-my-tooltips.js` &JSdoc=`15` &parse=`0` &jsFile=`kabinet` &outFolder=`assets/cache/`!-->
+<!--<link rel="stylesheet" type="text/css" href="/assets/cache/script.js">
+<script src="/assets/cache/script.js" type="text/javascript"></script>-->
+<style type="text/css">
+body,td,th { font-family: Corbel, "Myriad Pro", Arial, Helvetica, sans-serif; }
+</style>
+
+
+
+
+
+<!--<script src="/assets/templates/Ummei/scripts/js/jquery-1.7.2.min.js"></script>
+<script src="/assets/templates/Ummei/scripts/js/jquery.blend.js"></script>
+<script src="/assets/templates/Ummei/scripts/js/jquery-glowing.js" type="text/javascript"></script>
+<script src="/assets/templates/Ummei/scripts/js/jquery.color.js" type="text/javascript"></script>
+<script src="/assets/templates/Ummei/scripts/js/jquery.cookie.js"></script>
+
+/*<script type="text/javascript" src="custom00.js"></script>*/
+
+</script>-->
+<!--Подсказки
+<script type="text/javascript" src="/assets/templates/Ummei/scripts/js/jquery.style-my-tooltips.js"></script>
+<script type="text/javascript">
+$(function() {
+    //applies to all elements with title attribute. Change to ".class[title]" to select only elements with specific .class and title
+    $("[title]").style_my_tooltips({
+        tip_follows_cursor: "on", //on/off
+        tip_delay_time: 500 //milliseconds
+    });
+});
+
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(function() {
+
+//--Подсведка букв--
+
+        $("#tabButtons a").blend();
+
+//--Светящиеся буквы--
+
+      $('.white').addGlow({ textColor: '#f00', haloColor: '#f00', radius: 100 });
+      $('.green').addGlow({ textColor: '#0f0', haloColor: '#0f0', radius: 100 });
+      $('.lait-blue').addGlow({ textColor: '#0ff', haloColor: '#0ff', radius: 100 });
+      $('.orang').addGlow();
+
+    });
+});
+</script>
+<!--передаёв сообщение-->
+<script language="javascript" type="text/javascript" src="assets/plugins/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
+<script language="javascript" type="text/javascript" src="/assets/plugins/tinymce/js/xconfig.js"></script>
+<script type="text/javascript">
+
+  //  storeCurTemplate();
+
+</script>
+<script language="javascript" type="text/javascript">
+/*tinyMCE.init({
+    // Общие настройки
+    language : 'ru',
+    mode : "textareas",
+    theme : "advanced",
+    plugins : "style,advimage,advlink,searchreplace,print,contextmenu,paste,nonbreaking,xhtmlxtras,visualchars,media",//"emotions,preview,searchreplace,contextmenu,paste,visualchars",
+    // Настройки темы
+    theme_advanced_buttons1 : "|,bold,italic,underline,strikethrough,sub,sup,|,undo,redo,|,pastetext,pasteword,|,search,replace,|,hr,charmap,|,image,link,unlink,anchor,media,|,cleanup,removeformat,|,code,styleprops,",
+    theme_advanced_buttons2 : "bullist,numlist,outdent,indent,|,justifyleft,justifycenter,justifyright,justifyfull,|,formatselect,help,|,",
+    theme_advanced_toolbar_location : "top",
+    theme_advanced_toolbar_align : "left",
+    theme_advanced_statusbar_location : "bottom",
+    theme_advanced_resizing : true,
+    // Подключение нужного CSS стиля
+    //content_css : "assest/templates/me_template/style.css"
+    content_css : "assets/templates/Ummei/styles/cabinet.css"
+});*/
+tinyMCE.init({
+    theme                            : 'advanced',
+    mode                             : 'textareas',
+    elements                         : 'ta',
+    width                            : '595',
+    height                           : '619',
+    language                         : 'ru',
+    document_base_url                : 'http://ummei.ru/personal-cabinet-by-the-author.html',
+    relative_urls                    : true,
+    remove_script_host               : true,
+    convert_urls                     : true,
+    forced_root_block                : 'p',
+    force_p_newlines                 : true,
+    valid_elements                   : mce_valid_elements,
+    extended_valid_elements          : mce_extended_valid_elements,
+    invalid_elements                 : mce_invalid_elements,
+    popup_css_add                    : '/assets/plugins/tinymce/style/popup_add.css',
+    accessibility_warnings : false,
+    theme_advanced_toolbar_location  : 'top',
+    theme_advanced_statusbar_location: 'bottom',
+    theme_advanced_toolbar_align     : 'ltr',
+    theme_advanced_font_sizes        : '80%,90%,100%,120%,140%,160%,180%,220%,260%,320%,400%,500%,700%',
+   // content_css                      : '/assets/plugins/tinymce/style/content.css',
+    content_css : "/assets/templates/Ummei/styles/cabinet.css",
+    formats : {
+        alignleft   : {selector : 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes : 'justifyleft'},
+        alignright  : {selector : 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes : 'justifyright'},
+        alignfull   : {selector : 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes : 'justifyfull'}
+    },
+    apply_source_formatting          : true,
+    remove_linebreaks                : false,
+    convert_fonts_to_spans           : true,
+    plugins                          : 'pagebreak,style,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,contextmenu,paste,directionality,noneditable,visualchars,nonbreaking,xhtmlxtras,wordcount,advlist,autosave',
+    theme_advanced_buttons1          : 'save,restoredraft,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,formatselect,fontselect,fontsizeselect,charmap,emotions',
+    theme_advanced_buttons2          : 'pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,cleanup,styleprops,code,|,insertdate,inserttime,preview,|,forecolor,backcolor',
+    theme_advanced_buttons3          : 'tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,iespell,image,media,advhr,|,ltr,rtl',
+    theme_advanced_buttons4          : 'help,|,cite,abbr,acronym,del,ins,attribs,',
+    theme_advanced_resize_horizontal :  false,
+    external_link_list_url           : '/assets/plugins/tinymce/inc/tinymce.linklist.php',
+    theme_advanced_blockformats      : 'p,h1,h2,h3,h4,h5,h6,div,blockquote,code,pre',
+    theme_advanced_styles            : '',
+    theme_advanced_disable           : '',
+    theme_advanced_resizing          : true,
+    fullscreen_settings : {
+        theme_advanced_buttons1_add_before : 'save'
+    },
+    plugin_insertdate_dateFormat     : '%d-%m-%Y',
+    plugin_insertdate_timeFormat     : '%H:%M:%S',
+    entity_encoding                  : 'named',
+    file_browser_callback            : 'modx_fb',
+    onchange_callback                : false
+
+})
+
+</script>
+<script type="text/javascript" language="javascript">
+
+function myCustomOnChangeHandler() {
+    documentDirty = true;
+}
+
+</script>
+<script type="text/javascript" language="javascript">
+
+function modx_fb (field_name, url, type, win) {
+    if (type == "media") {type = win.document.getElementById("media_type").value;}
+    var cmsURL = "/manager/media/browser/mcpuk/browser.php?Connector=/manager/media/browser/mcpuk/connectors/php/connector.php&ServerPath=/&editor=tinymce&editorpath=/assets/plugins/tinymce/";
+    switch (type) {
+        case "image":
+            type = "images";
+            break;
+        case "media":
+        case "qt":
+        case "wmp":
+        case "rmp":
+            type = "media";
+            break;
+        case "shockwave":
+        case "flash":
+            type = "flash";
+            break;
+        case "file":
+            type = "files";
+            break;
+        default:
+            return false;
+    }
+    if (cmsURL.indexOf("?") < 0) {
+        //add the type as the only query parameter
+        cmsURL = cmsURL + "?type=" + type;
+    }
+    else {
+        //add the type as an additional query parameter
+        // (PHP session ID is now included if there is one at all)
+        cmsURL = cmsURL + "&type=" + type;
+    }
+
+    var windowManager = tinyMCE.activeEditor.windowManager.open({
+        file : cmsURL,
+        width : screen.width * 0.7,  // Your dimensions may differ - toy around with them!
+        height : screen.height * 0.7,
+        resizable : "yes",
+        inline : 0,  // This parameter only has an effect if you use the inlinepopups plugin!
+        close_previous : "no"
+    }, {
+        window : win,
+        input : field_name
+    });
+    if (window.focus) {windowManager.focus()}
+    return false;
+}
+
+</script>
+<!-- Google Analytics Content Experiment code -->
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='72608013-2',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
+
+</head>
+<body>
+<div  class="cab">
+<div id="boddy"></div>
+<div class="tab">
+<div id="tabButtons">
+    <a style="color: rgb(255,255,255);line-height: 80%;" class="white" href="index.html" id="example_home"><p><br></p>Главная</a>
+    <a style="color: rgb(255, 255, 255);line-height: 80%;" class="lait-blue" href="forum.html" id="example_about" ><p><br></p>Форум</a>
+    <a style="color: rgb(259,86,2);line-height: 130%;" class="orang" href=" " id="example_contact">Личный кабинет автора</a></div></div>
+
+
+<div class="book">
+<div id="page">
+    <div class="wumen"></div>
+    <div class="list"></div>
+    <!--!NewArticleEvent!-->
+
+    <form id="email" method="post" action="/personal-cabinet-by-the-author.html">
+    <input type="hidden" name="formid"  value="email" />
+    <div class="button_">
+
+    <button id="submit" name="submit" type="submit"></button></div>
+        <table id="table" callspacing="10">
+            <tr>
+            <td style="width:140px;">Имя:</td>
+            <td><input type="text" name="name"  value="" />
+            </tr>
+            <tr>
+                <td style="width:140px;">E-mail:</td>
+                <td><input type="text" name="email"  value="" />
+            </tr>
+            <tr>
+                <td style="width:140px;">Сообщение:</td>
+            </tr>
+        </table>
+        <textarea id="message" class="message" name="comments"></textarea>
+    </form>
+<!--&eFormOnBeforeMailSent=`CreateNewArticle`-->
+
+</div>
+</div>
+</div>
+</body>
+</html>
