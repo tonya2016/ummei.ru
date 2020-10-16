@@ -659,7 +659,7 @@ ul#tabPanes li#tab1,li#tab2,li#tab3,li#tab4
 	 -webkit-border-bottom-right-radius:5px;
 	 -webkit-border-bottom-left-radius:5px;
 	 border-radius: 0 0 5px 5px;
-	background-image: url(image/wood3.gif);
+	background-image: url(image/header/wood3.gif);
 
 	 -webkit-box-shadow: 0px 3px 4px rgba(0,0,0,0.6);
 	 -moz-box-shadow: 0px 3px 4px;
@@ -745,7 +745,7 @@ p { padding:3px}
   text-align:center;
   font-family:Arial;
   font-size:12px;
-  background: url(image/tooltip_ao.png) no-repeat;
+  background: url(image/header/tooltip_ao.png) no-repeat;
 }
 
 #menuTooltip p {
